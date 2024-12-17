@@ -1,0 +1,269 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  /* max-width: 100%; */
+  /* margin: auto; */
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  /* width: 100%;  */
+  /* height: 40rem; */
+  /* margin-top: 22vh; */
+}
+
+.slider-image {
+  width: 100%;
+  height: 30rem;
+  display: block;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent dark overlay */
+  z-index: 1;
+}
+
+.slider-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 65%;
+  left: 38%;
+  /* transform: translate(-50%, -50%); */
+  color: #ffffe0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.navigation-buttons {
+  position: absolute;
+  top: 85%;
+  left: 75%;
+  /* transform: translateY(-50%); */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  /* width: 16px; */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #080000;
+  /* font-size: 1.5rem; */
+  outline: none;
+  position: relative;
+  z-index: 2;
+  /* bottom: 50px; */
+  /* left: 70%;*/
+}
+
+.arrow {
+  display: inline-block;
+  transform: scale(1.2);
+  /* Adjust size if necessary */
+}
+
+.nav-button:hover {
+  background-color: red;
+}
+
+.banner-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-banner {
+  width: 300px;
+  background-color: #54595F;
+  /* Dark background color */
+  color: #fff;
+  padding: 20px;
+  /* border-radius: 8px; */
+}
+
+.banner-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: orange;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.banner-item:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.text {
+  font-size: 1rem;
+}
+/* Container for all cards */
+.category-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Individual card styling */
+.category-card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for cards */
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.category-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Title styling */
+.category-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333333;
+  margin: 15px 0 10px 0;
+}
+
+/* Description styling */
+.category-description {
+  font-size: 0.9em;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* Add spacing between cards on smaller screens */
+@media (max-width: 768px) {
+  .category-card {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .slider-image {
+    height: 20rem; /* Adjust slider image height for mobile */
+  }
+
+  .slider-content {
+    top: 55%; /* Adjust content position for mobile */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navigation-buttons {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+  }
+
+  .nav-button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .banner-container {
+    gap: 15px;
+    padding: 10px;
+    flex-direction: column; /* Stack banner and slider vertically */
+  }
+
+  .left-banner {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95% !important; /* Make banner full-width on mobile */
+    margin-bottom: 15px;
+  }
+
+  .banner-title {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .banner-item .icon {
+    font-size: 1.3rem; /* Adjust icon size */
+  }
+
+  .banner-item .text {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-image {
+    height: 15rem; /* Further reduce slider image height for very small screens */
+  }
+
+  .slider-content {
+    top: 50%; /* Further adjust content position */
+  }
+
+  .nav-button {
+    height: 35px;
+    width: 35px;
+  }
+
+  .banner-container {
+    gap: 10px;
+    padding: 5px;
+    flex-direction: column; /* Ensure banner and slider are stacked on very small screens */
+  }
+
+  .left-banner {
+    width: 91% !important; 
+  }
+
+  .banner-title {
+    font-size: 1rem;
+  }
+
+  .banner-item .icon {
+    font-size: 1.2rem;
+  }
+
+  .banner-item .text {
+    font-size: 0.85rem;
+  }
+}

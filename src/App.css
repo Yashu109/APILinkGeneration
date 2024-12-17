@@ -1,0 +1,33 @@
+#root {
+  /* max-width: 1280px; */
+  display: flex;
+  /* margin: 0 auto; */
+  text-align: center;
+  width: 100%;
+}
+/* for trispider website */
+/* .App-content{
+  width: 100% !important;
+
+} */
+
+.App-content{
+  width: 100% !important;
+  /* margin-top: -50vh; */
+  display: flex;
+  justify-content: center;
+
+}
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */

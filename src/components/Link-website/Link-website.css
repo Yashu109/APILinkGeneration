@@ -1,0 +1,127 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body styling */
+  body {
+    background: #FD6300 ;/* Warm gradient background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  /* Main container */
+  .trispider-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 50px 60px;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Trispider Logo */
+  .trispider-logo {
+    width: 250px;
+    /* margin-bottom: 30px; */
+    transition: transform 0.3s ease;
+  }
+  
+  .trispider-logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Button for API Link Registration */
+  .api-link-btn {
+    align-items: center;
+    background: #FD6300;
+    color: white;
+    padding: 18px 36px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 30px;
+    cursor: pointer;
+    width: 80%;
+    height: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .api-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .api-link-btn:active {
+    transform: translateY(2px);
+  }
+  
+  /* Login Form Styling */
+  .login-form {
+    margin-top: 20px;
+  }
+  
+  /* Input fields */
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 2px solid #feb47b;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #ff7e5f;
+    background-color: #fff;
+  }
+  
+  /* Login Button */
+  .login-btn {
+    background: #FD6300;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-btn:active {
+    transform: translateY(2px);
+  }
+  
+  /* Animation for fade-in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
